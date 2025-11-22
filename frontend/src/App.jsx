@@ -47,7 +47,7 @@ const App = () => {
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-slate-800">ShopHub</h1>
+          <h1 className="text-2xl font-bold text-slate-800">ShopHub!</h1>
           <div className="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full">
             <ShoppingCart size={20} />
             <span className="font-semibold">{cart.length}</span>
