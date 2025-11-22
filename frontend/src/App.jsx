@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import api from './api/axiosInstance';
 import { ShoppingCart, Trash2, Plus, Minus } from 'lucide-react';
 import PaymentButton from './components/PaymentButton'; 
 
@@ -9,7 +9,7 @@ const App = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/products/get-items').then(res => {
+    api.get('/products/get-items').then(res => {
       setProducts(res.data.products)
       setLoading(false)
     }).catch(err => {
@@ -53,7 +53,7 @@ const App = () => {
             <span className="font-semibold">{cart.length}</span>
           </div>
         </div>
-      </header>
+      </header> 
 
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
